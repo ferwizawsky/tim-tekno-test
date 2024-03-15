@@ -21,7 +21,7 @@ import Design from "@/assets/images/design.svg";
       </div>
       <div class="mt-6 lg:mt-0">
         <div
-          class="lg:hidden text-center font-semibold uppercase text-primary text-lg pb-4 tracking-widest"
+          class="lg:hidden text-center font-semibold uppercase text-lg pb-4 tracking-widest"
         >
           Latest
         </div>

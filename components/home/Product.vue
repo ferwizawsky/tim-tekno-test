@@ -11,7 +11,9 @@ import Product1 from "@/assets/images/product1.png";
 </script>
 <template>
   <div class="max-w-[820px] mx-auto mb-[75px]">
-    <div class="text-center font-semibold text-xl pb-8 mt-[100px]">Product</div>
+    <div class="text-center font-semibold text-xl pb-8 mt-[100px]">
+      Best Product
+    </div>
     <div>
       <Carousel
         class="relative w-full"

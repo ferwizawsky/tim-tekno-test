@@ -15,7 +15,7 @@ const props = defineProps<{
     <div
       :class="
         cn(
-          'p-4 bg-foreground/5 rounded-lg shadow-sm  flex items-center justify-center h-full relative',
+          'p-4 bg-foreground/5 dark:bg-foreground/30 rounded-lg shadow-sm  flex items-center justify-center h-full relative',
           props.class
         )
       "
