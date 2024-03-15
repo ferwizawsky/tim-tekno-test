@@ -5,9 +5,12 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: process.env.APP_NAME,
+      title: process.env.APP_NAME ?? "FIOEP Overstore",
       meta: [
-        { name: 'description', content: 'My amazing site.' }
+        { name: 'description', content: 'FIOEP Overstore for amazing unecessary item.' },
+        { property: 'og:title', content: process.env.APP_NAME ?? "FIOEP Overstore" },
+        { property: 'og:description', content: 'FIOEP Overstore for amazing unecessary item.' },
+        { property: 'og:image', content: "https://resume-beta.fioep.com/profile.jpg" }
       ],
       link: [
         {
