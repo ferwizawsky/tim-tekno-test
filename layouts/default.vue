@@ -8,10 +8,6 @@ const route = useRoute();
 const list = [];
 const colorMode = useColorMode();
 
-function getClass(e: String) {
-  if (route.path == e) return "text-background";
-  return "hover:text-background";
-}
 function darkChange(event: string) {
   colorMode.preference = event;
 }
@@ -24,7 +20,7 @@ function darkChange(event: string) {
       <OverstoreLogoIcon class="cursor-pointer" />
       <div>
         <div class="flex items-center space-x-2">
-          <div class="space-x-4 pr-10 hidden lg:block">
+          <div v-if="route.path == '/'" class="space-x-4 pr-10 hidden lg:block">
             <a href="#" class="text-primary font-semibold">Home</a>
             <a href="#">Whitelist</a>
             <a href="#">About</a>
@@ -39,28 +35,8 @@ function darkChange(event: string) {
       </div>
     </div>
 
-    <div
-      class="p-4 fixed rounded-xl bottom-1/2 right-4 z-20 bg-foreground/30 backdrop-blur-sm text-background/40 space-y-5"
-    >
-      <div>
-        <RouterLink :class="getClass('/')" to="/"><Home /></RouterLink>
-      </div>
-      <div>
-        <RouterLink :class="getClass('/stopwatch')" to="/stopwatch"
-          ><Timer
-        /></RouterLink>
-      </div>
-      <div>
-        <RouterLink :class="getClass('/master')" to="/master"
-          ><CloudRain
-        /></RouterLink>
-      </div>
-      <div>
-        <RouterLink :class="getClass('/logika')" to="/logika"
-          ><AppWindow
-        /></RouterLink>
-      </div>
-    </div>
+    <SoalNav />
+
     <div class="p-4 pb-10">
       <slot />
     </div>
