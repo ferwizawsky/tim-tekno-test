@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Product;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -21,5 +22,13 @@ class DatabaseSeeder extends Seeder
             'username' => 'admoon',
             'password' => Hash::make('admoon')
         ]);
+
+        for ($x = 0; $x < 30; $x++) {
+            Product::create([
+                'title' => 'Product Title ' . $x + 1,
+                'desc' => 'Lorem Ipsum Dolor Sit Amet.......',
+                'price' => ($x + 1) * 1000000
+            ]);
+        }
     }
 }
