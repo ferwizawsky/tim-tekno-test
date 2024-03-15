@@ -2,10 +2,16 @@
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { RouterLink } from "vue-router";
+import { Home, Timer, CloudRain, AppWindow } from "lucide-vue-next";
 
+const route = useRoute();
 const list = [];
 const colorMode = useColorMode();
 
+function getClass(e: String) {
+  if (route.path == e) return "text-background";
+  return "hover:text-background";
+}
 function darkChange(event: string) {
   colorMode.preference = event;
 }
@@ -34,10 +40,26 @@ function darkChange(event: string) {
     </div>
 
     <div
-      class="p-4 flex items-center fixed bottom-0 w-full z-20 bg-background/30 backdrop-blur-sm"
+      class="p-4 fixed rounded-xl bottom-1/2 right-4 z-20 bg-foreground/30 backdrop-blur-sm text-background/40 space-y-5"
     >
-      <RouterLink to="/">Soal 1</RouterLink>
-      <RouterLink to="/stopwatch"> Soal 2</RouterLink>
+      <div>
+        <RouterLink :class="getClass('/')" to="/"><Home /></RouterLink>
+      </div>
+      <div>
+        <RouterLink :class="getClass('/stopwatch')" to="/stopwatch"
+          ><Timer
+        /></RouterLink>
+      </div>
+      <div>
+        <RouterLink :class="getClass('/master')" to="/master"
+          ><CloudRain
+        /></RouterLink>
+      </div>
+      <div>
+        <RouterLink :class="getClass('/logika')" to="/logika"
+          ><AppWindow
+        /></RouterLink>
+      </div>
     </div>
     <div class="p-4 pb-10">
       <slot />
