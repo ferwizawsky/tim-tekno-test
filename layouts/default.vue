@@ -36,7 +36,8 @@ function darkChange(event: string) {
     </div>
 
     <SoalNav />
-
+    <OverstoreLoading />
+    <OverstoreNotifview />
     <div class="p-4 pb-10">
       <slot />
     </div>

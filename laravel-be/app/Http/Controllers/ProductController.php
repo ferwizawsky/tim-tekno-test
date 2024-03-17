@@ -90,10 +90,7 @@ class ProductController extends Controller
             ], 404);
         }
 
-        if ($data->user_id != $request->user()?->id)
-            return response()->json([
-                "message" => "Product not found!"
-            ], 404);
+
 
         $data->update([
             "title" => $request->title,

@@ -1,5 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      urlApi: process.env.API_URL ?? 'https://efarm.shiny.my.id/api',
+    }
+  },
+
   css: ['~/assets/css/main.css'],
   app: {
     head: {
@@ -48,5 +54,5 @@ export default defineNuxtConfig({
      */
     componentDir: './components/ui'
   },
-  modules: ['@nuxtjs/color-mode']
+  modules: ['@nuxtjs/color-mode', '@pinia/nuxt',]
 })
