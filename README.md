@@ -1,75 +1,39 @@
-# Nuxt 3 Minimal Starter
+## Gettin' Groovy with Nuxt & Laravel 11 (PHP 8.3)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Welcome to our guide to sync up your Nuxt.js frontend and Laravel 11 backend, getting them ready to rock and roll!
 
-## Setup
+### Here We Deploy it for Preview
 
-Make sure to install the dependencies:
+Frontend : [Overstore](https://tester.fioep.com/)
+Backend : [LaravelBe](https://efarm.shiny.my.id/)
 
-```bash
-# npm
-npm install
+Before we dive in, make sure you have the following prerequisites set up:
 
-# pnpm
-pnpm install
+- **Node.js & npm (or yarn)** - Get it from [here](https://nodejs.org/en).
+- **Composer** - You can download it [here](https://getcomposer.org/download/).
+- **PHP 8.3** - Ensure you have it installed. Check the supported versions [here](https://www.php.net/supported-versions.php).
 
-# yarn
-yarn install
+### Let's Get This Started:
 
-# bun
-bun install
-```
+1. **Clone Your Project:**
 
-## Development Server
+   Use Git to grab your project from wherever it's chillin'.
 
-Start the development server on `http://localhost:3000`:
+2. **Install:**
 
-```bash
-# npm
-npm run dev
+   In your project's root directory, run `npm install` (or `yarn install`) for Nuxt.js.
+   Head over to the `laravel-be` folder (your Laravel backend) and run `composer install` to get its dependencies.
 
-# pnpm
-pnpm run dev
+### Config Time (Don't Worry, It's Easy):
 
-# yarn
-yarn dev
+1. In the `laravel-be` folder, copy `.env.example` to `.env` and fill in the blanks with your database info and other secrets.
+2. Inside your Nuxt.js project (usually `nuxt.config.js`), tell it where to find your Laravel API.
 
-# bun
-bun run dev
-```
+### Time to Shine!
 
-## Production
+1. In the `laravel-be` folder, fire up the party with `php artisan serve`. This starts your Laravel API (usually on http://localhost:8000).
+2. Back in your Nuxt.js root, run `npm run dev` (or `yarn dev`) to launch the Nuxt.js frontend (usually on http://localhost:3000).
 
-Build the application for production:
+### That's It!
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Now, your Nuxt.js frontend and Laravel backend are jamming together. Enjoy the groove! 🎶
