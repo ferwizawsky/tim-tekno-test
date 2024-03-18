@@ -26,8 +26,8 @@ Before we dive in, make sure you have the following prerequisites set up:
 
 ### Config Time (Don't Worry, It's Easy):
 
-1. In the `laravel-be` folder, copy `.env.example` to `.env` and fill in the blanks with your database info and other secrets.
-2. Inside your Nuxt.js project (usually `nuxt.config.js`), tell it where to find your Laravel API.
+1. In the `laravel-be` folder, copy `.env.example` to `.env` we using sqlite to make it simple
+2. use `php artisan migrate --seed` to setup database and make seeder
 
 ### Time to Shine!
 
