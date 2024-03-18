@@ -54,7 +54,20 @@ const JSONEXample1 = buatBangun.toString();
           <div class="pt-10">Logika Functionnya seperti dibawah Ini :</div>
           <div class="font-semibold text-xl pt-6">Function 1</div>
           <div>
-            <highlightjs autodetect :code="JSONEXample" />
+            <highlightjs
+              autodetect
+              code="function kelompokkanBilanganGenap(JumlahBilangan2, JumlahKelompok2) {
+      const bilanganGenap = Array.from(
+        { length: JumlahBilangan2 },
+        (_, i) => 2 * (i + 1)
+      );
+      const kelompok = Array.from({ length: JumlahKelompok2 }, () => []);
+      bilanganGenap.forEach((bilangan, index) => {
+        kelompok[index % JumlahKelompok2].push(bilangan);
+      });
+      return kelompok;
+    }"
+            />
             <div class="pt-2">
               <div>Input:</div>
               <div>
@@ -70,7 +83,17 @@ const JSONEXample1 = buatBangun.toString();
 
           <div class="font-semibold text-xl pt-10">Function 2</div>
           <div>
-            <highlightjs autodetect :code="JSONEXample1" />
+            <highlightjs
+              autodetect
+              code="function buatBangun(JumlahBaris2) {
+      const bangun = [];
+      for (let i = JumlahBaris2; i > 0; i--) {
+        const baris = '*'.repeat(2 * i - 1);
+        bangun.push(baris);
+      }
+      return bangun;
+    }"
+            />
             <div class="pt-2">
               <div>Input:</div>
               <div>Jumlah Baris : {{ JumlahBaris.toString() }}</div>
