@@ -106,7 +106,7 @@ useHead({
 <template>
   <div class="pt-4 max-w-[1024px] mx-auto">
     <div class="lg:flex items-center justify-between pb-6">
-      <div class="">
+      <div class="pb-4 lg:pb-0">
         <Button variant="crystal">Add Data</Button>
       </div>
       <form
